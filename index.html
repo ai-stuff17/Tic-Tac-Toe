@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tic&nbsp;Tac&nbsp;Toe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="board-wrap">
+
+    <header class="scoreboard">
+      <div class="score" data-player="x">
+        <span class="score-label">Player X</span>
+        <span class="score-value" id="scoreX">0</span>
+      </div>
+
+      <div class="score score--draw" data-player="draw">
+        <span class="score-label">Draws</span>
+        <span class="score-value" id="scoreDraw">0</span>
+      </div>
+
+      <div class="score" data-player="o">
+        <span class="score-label">Player O</span>
+        <span class="score-value" id="scoreO">0</span>
+      </div>
+    </header>
+
+    <p class="status" id="status" aria-live="polite">X to move</p>
+
+    <div class="grid" id="grid" role="grid" aria-label="Tic tac toe board">
+      <button class="cell" role="gridcell" data-index="0" aria-label="Row 1, column 1, empty"></button>
+      <button class="cell" role="gridcell" data-index="1" aria-label="Row 1, column 2, empty"></button>
+      <button class="cell" role="gridcell" data-index="2" aria-label="Row 1, column 3, empty"></button>
+      <button class="cell" role="gridcell" data-index="3" aria-label="Row 2, column 1, empty"></button>
+      <button class="cell" role="gridcell" data-index="4" aria-label="Row 2, column 2, empty"></button>
+      <button class="cell" role="gridcell" data-index="5" aria-label="Row 2, column 3, empty"></button>
+      <button class="cell" role="gridcell" data-index="6" aria-label="Row 3, column 1, empty"></button>
+      <button class="cell" role="gridcell" data-index="7" aria-label="Row 3, column 2, empty"></button>
+      <button class="cell" role="gridcell" data-index="8" aria-label="Row 3, column 3, empty"></button>
+
+      <svg class="win-line" id="winLine" viewBox="0 0 300 300" preserveAspectRatio="none" aria-hidden="true">
+        <line id="winLinePath" x1="0" y1="0" x2="0" y2="0" />
+      </svg>
+    </div>
+
+    <div class="controls">
+      <button class="btn btn--ghost" id="resetScores">Reset scores</button>
+      <button class="btn btn--primary" id="newRound">New round</button>
+    </div>
+
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
